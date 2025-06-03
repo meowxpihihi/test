@@ -8,39 +8,50 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Nunito', sans-serif;
+      font-family: 'Inter', sans-serif;
     }
-    /* Custom scrollbar for pastel theme */
     ::-webkit-scrollbar {
-      width: 10px;
+      width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #fff1f2; /* rose-100 */
+      background: #fce7f3;
     }
     ::-webkit-scrollbar-thumb {
-      background: #f472b6; /* pink-400 */
-      border-radius: 5px;
+      background: #f472b6;
+      border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #ec4899; /* pink-500 */
+      background: #ec4899;
     }
   </style>
-<script type="importmap">
+  <!-- Babel Standalone for client-side JSX/TS transpilation -->
+  <script src="https://unpkg.com/@babel/standalone@7.24.0/babel.min.js"></script>
+
+  <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@^19.1.0",
-    "react/": "https://esm.sh/react@^19.1.0/",
-    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
+    "react": "https://esm.sh/react@18.3.1",
+    "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/"
   }
 }
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-<body class="bg-rose-50 text-slate-700">
+<body class="bg-pink-50">
   <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
+  <!--
+    The main script is changed to type="text/babel" and data-type="module"
+    Babel will transpile it before the browser executes it.
+    Ensure all your .tsx files use relative paths for imports e.g. './App.tsx'
+    and include file extensions.
+  -->
+  <script type="text/babel" data-type="module" data-presets="react,typescript" src="./index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
 </body>
 </html>

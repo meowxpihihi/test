@@ -1,5 +1,6 @@
 {
   "name": "Trắc nghiệm tính cách MBTI",
   "description": "Một ứng dụng web để thực hiện bài trắc nghiệm tính cách MBTI và khám phá loại tính cách của bạn. Ứng dụng bao gồm một loạt câu hỏi giúp xác định sở thích của bạn theo bốn cặp đối lập: Hướng ngoại (E) vs. Hướng nội (I), Giác quan (S) vs. Trực giác (N), Lý trí (T) vs. Tình cảm (F), và Nguyên tắc (J) vs. Linh hoạt (P).",
-  "requestFramePermissions": []
+  "requestFramePermissions": [],
+  "prompt": ""
 }

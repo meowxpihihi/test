@@ -1,5 +1,5 @@
 
-import { Question, MbtiProfile, DichotomyLetter, MbtiDimension } from './types';
+import { Question, MbtiProfile, DichotomyLetter, MbtiDimension } from './types.ts';
 
 export const QUESTIONS: Question[] = [
   // EI Dimension (Hướng ngoại/Hướng nội)
@@ -321,4 +321,3 @@ export const MBTI_PROFILES: MbtiProfile[] = [
     preferredCareer: 'Giám đốc điều hành, Doanh nhân, Nhà tư vấn quản lý, Chính trị gia'
   }
 ];
-    
